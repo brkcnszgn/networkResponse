@@ -22,6 +22,6 @@ interface Service {
 
 }
 
-object HttpStatus{
+public object HttpStatus{
     var code:Int? = null
 }
