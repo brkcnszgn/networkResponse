@@ -1,7 +1,8 @@
 package com.brkcnszgn.testcoroutine
 
+import com.brkcnszgn.networkresponse.NetworkResponse
 import com.google.gson.JsonObject
-import com.haroldadmin.cnradapter.NetworkResponse
+
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET

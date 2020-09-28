@@ -6,11 +6,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.brkcnszgn.networkresponse.NetworkResponse
+import com.brkcnszgn.networkresponse.NetworkResponseAdapterFactory
 import com.google.gson.Gson
 import com.google.gson.JsonObject
-import com.haroldadmin.cnradapter.NetworkResponse
-import com.haroldadmin.cnradapter.NetworkResponseAdapterFactory
-import com.haroldadmin.cnradapter.invoke
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
@@ -69,7 +68,7 @@ class MainViewModel() : ViewModel() {
                     resultSucces2.value = bar.body
 
                 }
-                is NetworkResponse.ServerError<ErrorBody> -> {
+                is NetworkResponse.ApiError<ErrorBody> -> {
                     Log.d(TAG,"Loading kapandı")
                     loading.value = false
                     Log.d(TAG, "ApiError ${bar.body}")
